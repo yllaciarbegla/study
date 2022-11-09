@@ -1,0 +1,455 @@
+@charset "UTF-8";
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+:focus,
+:active {
+	outline: none;
+}
+
+a:focus,
+a:active {
+	outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
+
+html,
+.page {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+button {
+	cursor: pointer;
+}
+
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:visited,
+a:hover {
+	text-decoration: none;
+}
+
+ul li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: gilroy;
+	font-display: swap;
+	src: url("../fonts/gilroy-extrabold.woff2") format("woff2"), url("../fonts/gilroy-extrabold.woff") format("woff");
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: Helvetica;
+	font-display: swap;
+	src: url("../fonts/Helvetica-Bold-Font.woff2") format("woff2"), url("../fonts/Helvetica-Bold-Font.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: Jura;
+	font-display: swap;
+	src: url("../fonts/Jura-Bold.woff2") format("woff2"), url("../fonts/Jura-Bold.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+}
+
+.page::-webkit-scrollbar {
+	width: 5px;
+}
+
+.page::-webkit-scrollbar-track {
+	background: rgba(0, 0, 0, 0.4);
+}
+
+.page::-webkit-scrollbar-thumb {
+	background-color: black;
+	border-radius: 40px;
+	border: 3px solid transparent;
+}
+
+.page {
+	scrollbar-width: thin;
+	scrollbar-color: black rgba(0, 0, 0, 0.5);
+}
+
+.wrapper {
+	background-size: cover;
+	width: 100vw;
+	height: 100vh;
+	min-height: 1200px;
+	padding: 5%;
+	font-style: normal;
+	color: white;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.content-wrapper {
+	height: 100%;
+	max-width: 1600px;
+	min-height: 900px;
+	max-height: 1200px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.flamingo__wrapper {
+	background: url("../img/flamingo-bg.jpg") no-repeat;
+	background-size: cover;
+}
+
+.flamingo__wrapper .content-wrapper__arrow:hover::before {
+	border-color: #76D7EB;
+}
+
+.flamingo__wrapper .content-wrapper__arrow:hover::after {
+	background-color: #76D7EB;
+}
+
+.macaw__wrapper {
+	background: url("../img/macaw-bg.jpg") no-repeat;
+	background-size: cover;
+}
+
+.macaw__wrapper .content-wrapper__arrow:hover::before {
+	border-color: #E10F34;
+}
+
+.macaw__wrapper .content-wrapper__arrow:hover::after {
+	background-color: #E10F34;
+}
+
+.colibri__wrapper {
+	background: url("../img/colibri-bg.jpg") no-repeat;
+	background-size: cover;
+}
+
+.colibri__wrapper .content-wrapper__arrow:hover::before {
+	border-color: #F7C51A;
+}
+
+.colibri__wrapper .content-wrapper__arrow:hover::after {
+	background-color: #F7C51A;
+}
+
+.flamingo__content-wrapper {
+	background-color: #76D7EB;
+}
+
+.flamingo__content-wrapper::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url("../img/flamingo.png");
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	z-index: 2;
+}
+
+.macaw__content-wrapper {
+	background-color: #E10F34;
+}
+
+.macaw__content-wrapper::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url("../img/macaw.png");
+	background-size: 1800px;
+	background-repeat: no-repeat;
+	background-position: 14px -255px;
+	z-index: 2;
+}
+
+.colibri__content-wrapper {
+	background-color: #F7C51A;
+}
+
+.colibri__content-wrapper::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url("../img/colibri.png");
+	background-size: 1800px;
+	background-repeat: no-repeat;
+	background-position: 14px -255px;
+	z-index: 2;
+}
+
+.content-title {
+	padding: 1.875% 1.875% 0 1.875%;
+	font-family: "Gilroy";
+	font-weight: 800;
+	font-size: 32px;
+	line-height: 140%;
+	position: inherit;
+	z-index: 2;
+}
+
+.main-title {
+	padding: 155px 40px 0 40px;
+	font-family: "Gilroy";
+	font-weight: 800;
+	font-size: 315px;
+	line-height: 100%;
+	position: relative;
+}
+
+.icon-flamingo:before {
+	position: absolute;
+	top: 188px;
+	left: 58px;
+	z-index: 3;
+	font-size: 299px;
+}
+
+.icon-macaw:before {
+	position: absolute;
+	top: 195px;
+	left: 58px;
+	z-index: 3;
+	font-size: 228px;
+}
+
+.icon-colibri:before {
+	position: absolute;
+	top: 192px;
+	left: 53px;
+	z-index: 3;
+	font-size: 234px;
+}
+
+.text {
+	padding: 25px 0 0 40px;
+	max-width: 37.5%;
+	margin-bottom: 30px;
+	font-family: "Jura";
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 140%;
+	position: inherit;
+	z-index: 5;
+}
+
+.content-wrapper__arrow {
+	display: block;
+	margin-left: 40px;
+	width: 95px;
+	height: 95px;
+	border: 4px solid white;
+	border-radius: 50%;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+	position: relative;
+	z-index: 5;
+}
+
+.content-wrapper__arrow::after {
+	content: "";
+	height: 26px;
+	width: 4px;
+	position: absolute;
+	top: calc(50% - 13px);
+	left: calc(50% - 2px);
+	background-color: white;
+}
+
+.content-wrapper__arrow::before {
+	content: "";
+	height: 20px;
+	width: 20px;
+	border: 4px solid white;
+	border-top: none;
+	border-left: none;
+	position: absolute;
+	top: calc(50% - 6px);
+	left: calc(50% - 10px);
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.content-wrapper__arrow:hover {
+	background-color: white;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+	color: white;
+}
+
+.swiper-pagination-bullet {
+	width: 20px;
+	height: 20px;
+}
+
+.swiper-pagination-bullet-active {
+	background-color: white;
+}
+
+@media (max-width: 1600px) {
+	.wrapper {
+		padding: calc(10px + 70 * (100vw - 320px) / 1280);
+	}
+
+	.main-title {
+		font-size: calc(190px + 125 * (100vw - 1000px) / 600);
+	}
+
+	.icon-flamingo:before {
+		left: calc(49px + 9 * (100vw - 1000px) / 600);
+		top: calc(176px + 12 * (100vw - 1000px) / 600);
+		font-size: calc(181px + 118 * (100vw - 1000px) / 600);
+	}
+
+	.icon-macaw:before {
+		left: calc(51px + 3 * (100vw - 1000px) / 600);
+		top: calc(180px + 15 * (100vw - 1000px) / 600);
+		font-size: calc(137px + 91 * (100vw - 1000px) / 600);
+	}
+
+	.icon-colibri:before {
+		left: calc(48px + 5 * (100vw - 1000px) / 600);
+		top: calc(178px + 14 * (100vw - 1000px) / 600);
+		font-size: calc(140px + 94 * (100vw - 1000px) / 600);
+	}
+
+	.colibri__content-wrapper::before {
+		-webkit-transform: scale(-1, 1);
+		-ms-transform: scale(-1, 1);
+		transform: scale(-1, 1);
+		background-position: calc(-1200px + 659 * (100vw - 320px) / 1280);
+	}
+}
+
+@media (max-width: 1200px) {
+	.macaw__content-wrapper {
+		background-color: #E10F34;
+	}
+
+	.macaw__content-wrapper::before {
+		content: "";
+		background-size: 1800px;
+		background-position: calc(-679px + 418 * (100vw - 320px) / 880) calc(278px + -334 * (100vw - 320px) / 880);
+		z-index: 1;
+	}
+}
+
+@media (max-width: 1000px) {
+	.text {
+		padding: 80px 0 0 0;
+		max-width: 80%;
+		margin: 0 auto 50px;
+		text-align: center;
+	}
+
+	.content-wrapper__arrow {
+		margin: 0 auto;
+	}
+
+	.swiper-button-prev,
+	.swiper-button-next {
+		display: none;
+	}
+
+	.swiper-horizontal>.swiper-pagination-bullets {
+		bottom: 80px;
+	}
+}
+
+@media (max-width: 800px) {
+	.flamingo__content-wrapper::before {
+		background-position-x: calc(-740px + 260 * (100vw - 320px) / 480);
+	}
+
+	.flamingo__content-wrapper .icon-flamingo:before {
+		display: none;
+	}
+
+	.main-title {
+		text-align: center;
+		z-index: 5;
+	}
+
+	.icon-macaw:before {
+		display: none;
+	}
+
+	.icon-colibri:before {
+		display: none;
+	}
+}
