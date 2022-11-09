@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Scroll snap</title>
+	<style>
+		* {
+			font-family: sans-serif;
+		}
+
+		.section__image {
+			padding-top: 100px;
+			max-width: 100%;
+			height: auto;
+			margin-bottom: 65px;
+		}
+
+		.wrapper {
+			height: 100vh;
+			overflow-y: auto;
+			scroll-snap-type: y mandatory;
+			scrollbar-width: none;
+
+		}
+
+		.wrapper::-webkit-scrollbar {
+			width: 0;
+		}
+
+		.page__section-1 {
+			background-color: #97EAB9;
+		}
+
+		.page__section-2 {
+			background-color: #5352ED;
+		}
+
+		.page__section-3 {
+			background-color: #FFD280;
+		}
+
+		.section {
+			scroll-snap-align: start;
+			width: 100%;
+			height: 100vh;
+			min-height: 100%;
+			padding: 40px 30px;
+			position: relative;
+		}
+
+		.section__title {
+			margin-bottom: 35px;
+			text-transform: uppercase;
+			font-size: 36px;
+			line-height: 45px;
+		}
+
+		.section__text {
+			max-width: 68.8%;
+			font-size: 12px;
+			line-height: 15px;
+		}
+
+		@media (max-width: 766px) {
+			.section__image {
+				padding-top: 0;
+			}
+		}
+
+		@media (max-height: 515px) {
+			.section__image {
+				padding-top: 0;
+			}
+
+			.section {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				align-items: center;
+				-webkit-box-pack: center;
+				-ms-flex-pack: center;
+				justify-content: center;
+			}
+
+			.description {
+				-webkit-box-flex: 0;
+				-ms-flex: 0 0 50%;
+				flex: 0 0 50%;
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-orient: vertical;
+				-webkit-box-direction: normal;
+				-ms-flex-direction: column;
+				flex-direction: column;
+			}
+
+			.description .section__title {
+				margin-bottom: 20px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<section class="page__section-1 section">
+			<picture>
+				<source srcset="img/man-on-bike.webp" type="image/webp"><img class="section__image" width="237" height="200"
+					src="img/man-on-bike.png">
+			</picture>
+			<div class="description">
+				<h1 class="section__title">Social Distancing</h1>
+				<p class="section__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+					laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>
+		</section>
+		<section class="page__section-2 section">
+			<picture>
+				<source srcset="img/man-desk.webp" type="image/webp"><img width="237" height="200" src="img/man-desk.png"
+					alt="">
+			</picture>
+			<div class="description">
+				<h1 class="section__title">Social Distancing</h1>
+				<p class="section__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+					laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>
+		</section>
+		<section class="page__section-3 section">
+			<picture>
+				<source srcset="img/man-with-flag.webp" type="image/webp"><img width="237" height="200"
+					src="img/man-with-flag.png" alt="">
+			</picture>
+			<div class="description">
+				<h1 class="section__title">Social Distancing</h1>
+				<p class="section__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+					laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>
+		</section>
+	</div>
+	<div>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas quibusdam nobis eos animi, ea magni cum, reiciendis
+		ipsa sequi laborum a tempore distinctio ipsam iusto eaque sit voluptas. Necessitatibus minus suscipit nihil, magni
+		commodi animi. Eum magni quaerat voluptates exercitationem modi debitis minima facilis iste a! Dolore temporibus
+		mollitia voluptates necessitatibus veritatis odio quaerat quia expedita sapiente illum, fuga harum aliquam tenetur
+		corporis ea, consequuntur enim ipsum? Similique quae quasi quisquam natus distinctio nihil blanditiis sapiente
+		omnis. Assumenda maiores eaque quod iure facilis provident dignissimos, quidem, recusandae corrupti modi rem dicta
+		inventore odit aut quae dolorem aperiam consequuntur illo. Animi, rem? Consequuntur quae porro culpa corporis
+		laboriosam obcaecati cum. Labore ratione similique laboriosam quisquam, officiis ipsam repudiandae rerum. Maxime,
+		ex! Fuga sapiente aperiam praesentium quidem dolor magni odit accusantium omnis, rem quam sequi quod esse, culpa
+		cumque adipisci minima aliquam. Repellendus perspiciatis quia ipsa molestias nobis, deserunt voluptas iure
+		accusantium at? Commodi, veniam aliquam? Minus quisquam, voluptatibus at earum repudiandae expedita aliquid ratione
+		rem ipsam qui facere, recusandae iure itaque quidem error numquam animi tenetur sed. Laborum enim neque nesciunt
+		corporis inventore tempora corrupti facilis totam consequuntur optio odit, impedit mollitia rerum eos! Similique
+		fugit cupiditate, nisi dolorum nulla voluptatem.
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tabs</title>
+	<style>
+		.tabs__triggers {
+			display: flex;
+		}
+
+		.tabs__trigger-item {
+			flex: 1 1 33.33%;
+			padding: 15px;
+			text-align: center;
+			text-decoration: none;
+			color: #000;
+			text-transform: uppercase;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+
+		.tabs__trigger-item_active {
+			background-color: coral;
+		}
+
+		.tabs__content-item {
+			display: none;
+			padding: 15px;
+			background-color: coral;
+		}
+
+		.tabs__content-item_active {
+			display: block;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="tabs">
+		<div class="tabs__triggers">
+			<a href="#tab-1" class="tabs__trigger-item">first tab</a>
+			<a href="#tab-2" class="tabs__trigger-item">second tab</a>
+			<a href="#tab-3" class="tabs__trigger-item">third wery looong tab</a>
+		</div>
+		<div class="tabs__content">
+			<div id="tab-1" class="tabs__content-item">First. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio
+				eligendi nemo distinctio consequuntur qui quisquam amet veritatis, rem provident accusantium expedita
+				perferendis pariatur nulla fuga dicta laboriosam mollitia nihil veniam? Lorem ipsum dolor sit amet consectetur
+				adipisicing elit. Voluptatibus dolorem maxime assumenda quae, ducimus quasi, repellendus non quidem suscipit
+				earum nulla nihil laudantium delectus fugiat doloribus sed vel esse debitis repudiandae nesciunt molestiae minus
+				eos. Numquam quod cupiditate quos architecto necessitatibus magnam consectetur autem? Deserunt culpa beatae
+				dicta repudiandae repellendus!</div>
+			<div id="tab-2" class="tabs__content-item">Second. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio
+				eligendi nemo distinctio consequuntur qui quisquam amet veritatis, rem provident accusantium expedita
+				perferendis pariatur nulla fuga dicta laboriosam mollitia nihil veniam? Lorem ipsum dolor sit amet consectetur
+				adipisicing elit. Voluptatibus dolorem maxime assumenda quae, ducimus quasi, repellendus non quidem suscipit
+				earum nulla nihil laudantium delectus fugiat doloribus sed vel esse debitis repudiandae nesciunt molestiae minus
+				eos. Numquam quod cupiditate quos architecto necessitatibus magnam consectetur autem? Deserunt culpa beatae
+				dicta repudiandae repellendus!</div>
+			<div id="tab-3" class="tabs__content-item">Third. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio
+				eligendi nemo distinctio consequuntur qui quisquam amet veritatis, rem provident accusantium expedita
+				perferendis pariatur nulla fuga dicta laboriosam mollitia nihil veniam? Lorem ipsum dolor sit amet consectetur
+				adipisicing elit. Voluptatibus dolorem maxime assumenda quae, ducimus quasi, repellendus non quidem suscipit
+				earum nulla nihil laudantium delectus fugiat doloribus sed vel esse debitis repudiandae nesciunt molestiae minus
+				eos. Numquam quod cupiditate quos architecto necessitatibus magnam consectetur autem? Deserunt culpa beatae
+				dicta repudiandae repellendus!</div>
+		</div>
+	</div>
+
+	<script>
+		document.querySelectorAll(".tabs__trigger-item").forEach(item => {
+			item.addEventListener("click", function (e) {
+				e.preventDefault();
+				const id = e.target.getAttribute("href").replace("#", "");
+
+				document.querySelectorAll(".tabs__trigger-item").forEach(item => item.classList.remove("tabs__trigger-item_active"));
+				document.querySelectorAll(".tabs__content-item").forEach(item => item.classList.remove("tabs__content-item_active"));
+
+				this.classList.add("tabs__trigger-item_active");
+				document.querySelector(`#${id}`).classList.add("tabs__content-item_active");
+			})
+		});
+
+		document.querySelector(".tabs__trigger-item").click();
+	</script>
+</body>
+
+</html>
