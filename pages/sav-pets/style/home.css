@@ -73,13 +73,12 @@
 }
 
 .choose-way__cards-block {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 34px;
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+	gap: 30px;
 }
 
 .choose-way__item {
-	flex: 1 1 31.25%;
 	padding: 35px 25px;
 	background-color: #fff;
 	z-index: 1;
@@ -252,6 +251,8 @@
 }
 
 .ready__content-block .button {
+	max-width: 200px;
+	flex: 1 0 auto;
 	padding: 12px 28px;
 	color: #a5cbe0;
 	background-color: #fff;
@@ -420,6 +421,10 @@
 		margin-bottom: 110px;
 	}
 
+	.choose-way__cards-block {
+		grid-template-columns: repeat(2, auto);
+	}
+
 	.join {
 		flex-direction: column;
 		gap: 0;
@@ -503,7 +508,8 @@
 	}
 
 	.choose-way__cards-block {
-		flex-direction: column;
+		grid-template-columns: auto;
+
 	}
 
 	.different__text-block {
