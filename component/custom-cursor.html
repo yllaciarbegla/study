@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cursor</title>
+	<link rel="stylesheet" href="reset.css">
+	<style>
+		* {
+			cursor: none;
+		}
+
+		.page {
+			background-color: black;
+			width: 100vw;
+			height: 100vh;
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.active-button {
+			height: 10vh;
+			width: 20vw;
+			background-color: tomato;
+		}
+
+		/* cursor */
+
+		.cursor,
+		.aura {
+			border-radius: 100%;
+			z-index: 1000;
+		}
+
+		.cursor.hidden,
+		.aura.hidden {
+			opacity: 0;
+		}
+
+		.cursor {
+			z-index: 10;
+			width: 10px;
+			height: 10px;
+			background-color: rgba(255, 255, 255, 0.674);
+			position: fixed;
+			transform: translate(-50%, -50%);
+			pointer-events: none;
+			transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
+		}
+
+		.cursor.active {
+			background-color: rgba(0, 0, 0, 0);
+		}
+
+		.aura {
+			z-index: 9;
+			width: 50px;
+			height: 50px;
+			border: 1px solid rgba(255, 255, 255, 0.6);
+			background-color: rgba(255, 255, 255, 0.2);
+			position: fixed;
+			pointer-events: none;
+			left: 0;
+			top: 0;
+			transform: translate(calc(-50% + 15px), -50%);
+			transition: all 150ms ease-out;
+		}
+
+		.aura.active {
+			background-color: rgba(255, 255, 255, 0.6);
+		}
+
+		.cursorinnerhover {
+			width: 50px;
+			height: 50px;
+			opacity: 0.5;
+		}
+	</style>
+</head>
+
+<body class="page">
+
+	<div class="cursor"></div>
+	<div class="aura"></div>
+
+	<div class="active-button"></div>
+
+	<script>
+
+		let aura = document.querySelector('.aura');
+		let cursor = document.querySelector('.cursor');
+		let activeButton = document.querySelector('.active-button');
+		document.addEventListener('mousemove', function (e) {
+			let x = e.clientX;
+			let y = e.clientY;
+			aura.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
+		});
+
+		document.addEventListener('mousemove', function (e) {
+			let x = e.clientX;
+			let y = e.clientY;
+			cursor.style.left = x + 'px';
+			cursor.style.top = y + 'px';
+		});
+
+		document.addEventListener('mousedown', function () {
+			cursor.classList.add('cursorinnerhover');
+		});
+
+		document.addEventListener('mouseup', function () {
+			cursor.classList.remove('cursorinnerhover');
+		});
+
+		document.addEventListener('mousemove', function () {
+			cursor.classList.remove('hidden');
+			aura.classList.remove('hidden');
+		});
+
+		document.addEventListener('mouseout', function () {
+			cursor.classList.add('hidden');
+			aura.classList.add('hidden');
+		});
+
+		activeButton.addEventListener('mousemove', function () {
+			cursor.classList.add('active');
+			aura.classList.add('active');
+		});
+
+		activeButton.addEventListener('mouseout', function () {
+			cursor.classList.remove('active');
+			aura.classList.remove('active');
+		});
+
+	</script>
+</body>
+
+</html>
