@@ -4,12 +4,12 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+	<link rel="stylesheet" href="files/swiper/swiper-bundle.min.css">
 	<link rel="stylesheet" href="files/fonts-style.css">
 	<link rel="stylesheet" href="css/style.min.css">
 	<link rel="icon" href="img/icon/logo.svg" type="image/x-icon">
 	<title>Our Menu - FoodZero</title>
-	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
+	<script src="files/swiper/swiper-bundle.min.js" defer></script>
 	<script src="js/app.min.js" defer></script>
 </head>
 
@@ -42,7 +42,7 @@
 				</div>
 
 				<nav class="menu">
-					<a class="menu__open-btn" href="#menu__wrapper">
+					<a class="menu__open-btn" href="#menu__wrapper" aria-label="Menu open icon">
 						<div class="icon-nav-open"></div>
 					</a>
 
@@ -137,17 +137,17 @@
 						<div class="food-menu__position">
 							<div class="menu__item">
 	<p class="menu__price title">$20</p>
-	<h4 class="menu__name title">Grilled Okra and Tomatoes </h4>
+	<h3 class="menu__name title">Grilled Okra and Tomatoes </h4>
 	<p class="menu__description text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, iusto harum.</p>
 </div>
 							<div class="menu__item">
 	<p class="menu__price title">$18</p>
-	<h4 class="menu__name title">Cucumber Salad</h4>
+	<h3 class="menu__name title">Cucumber Salad</h4>
 	<p class="menu__description text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 </div>
 							<div class="menu__item">
 	<p class="menu__price title">$12</p>
-	<h4 class="menu__name title"> Basil Pancakes</h4>
+	<h3 class="menu__name title"> Basil Pancakes</h4>
 	<p class="menu__description text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 </div>
 						</div>
@@ -165,17 +165,17 @@
 						<div class="food-menu__position">
 							<div class="menu__item">
 	<p class="menu__price title">$20</p>
-	<h4 class="menu__name title">Deep Sea Snow White Cod Fillet</h4>
+	<h3 class="menu__name title">Deep Sea Snow White Cod Fillet</h4>
 	<p class="menu__description text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 </div>
 							<div class="menu__item">
 	<p class="menu__price title">$22</p>
-	<h4 class="menu__name title">Steak With Rosemary Butter</h4>
+	<h3 class="menu__name title">Steak With Rosemary Butter</h4>
 	<p class="menu__description text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, iusto harum. Laudantium culpa necessitatibus, inventore ipsa consectetur amet officiis blanditiis?</p>
 </div>
 							<div class="menu__item">
 	<p class="menu__price title">$20</p>
-	<h4 class="menu__name title">Steaks with Grilled Kimchi</h4>
+	<h3 class="menu__name title">Steaks with Grilled Kimchi</h4>
 	<p class="menu__description text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 </div>
 						</div>
@@ -193,17 +193,17 @@
 						<div class="food-menu__position">
 							<div class="menu__item">
 	<p class="menu__price title">$158</p>
-	<h4 class="menu__name title">Wine Pairing</h4>
+	<h3 class="menu__name title">Wine Pairing</h4>
 	<p class="menu__description text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, iusto harum. Laudantium culpa necessitatibus, inventore ipsa consectetur amet officiis blanditiis?</p>
 </div>
 							<div class="menu__item">
 	<p class="menu__price title">$168</p>
-	<h4 class="menu__name title">Natural Wine Pairing</h4>
+	<h3 class="menu__name title">Natural Wine Pairing</h4>
 	<p class="menu__description text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, iusto harum. Laudantium culpa necessitatibus, inventore ipsa consectetur amet officiis blanditiis?</p>
 </div>
 							<div class="menu__item">
 	<p class="menu__price title">$90</p>
-	<h4 class="menu__name title">Whisky Flyer</h4>
+	<h3 class="menu__name title">Whisky Flyer</h4>
 	<p class="menu__description text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, iusto harum. Laudantium culpa necessitatibus, inventore ipsa consectetur amet officiis blanditiis?</p>
 </div>
 						</div>
@@ -219,7 +219,7 @@
 			<p class="reservation__description text">Get in touch with restaurant</p>
 			<form class="reservation__form">
 				<input name="first-name" class="reservation__input button text" type="date" placeholder="yyyy-mm-dd" required>
-				<input name="time" class="reservation__input button text" type="time" value="13:00" required>
+				<input name="time" class="reservation__input button text" type="time" value="13:00" required aria-label="Time">
 				<select class="reservation__input button text" name="number-of-people" >
 					<option value="1">1 Person</option>
 					<option value="2" selected>2 Person</option>
@@ -260,10 +260,10 @@
 			<div class="bottom__wrapper">
 				<p class="rights text">&#169; 2020 Zero Inc. All rights Reserved</p>
 				<div class="footer__social-links social-links">
-					<a class="social-links__item icon-insta" href="coming-soon.html"></a>
-					<a class="social-links__item icon-twitter" href="coming-soon.html"></a>
-					<a class="social-links__item icon-facebook" href="coming-soon.html"></a>
-					<a class="social-links__item icon-youtube" href="coming-soon.html"></a>
+					<a class="social-links__item icon-insta" href="coming-soon.html" aria-label="Instagram link"></a>
+					<a class="social-links__item icon-twitter" href="coming-soon.html" aria-label="Twitter link"></a>
+					<a class="social-links__item icon-facebook" href="coming-soon.html" aria-label="Facebook link"></a>
+					<a class="social-links__item icon-youtube" href="coming-soon.html" aria-label="Youtube link"></a>
 				</div>
 			</div>
 		</div>
