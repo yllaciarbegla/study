@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>About me</title>
+	<meta name="author" content="yllaciarbegla@outlook.com">
+
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="js/app.js" defer></script>
+</head>
+
+<body class="page about-page">
+
+	<div class="loader-wrapper">
+		<div class="loader"></div>
+		<div class="loader-section section-left"></div>
+		<div class="loader-section section-right"></div>
+	</div>
+
+	<div class="cursor"></div>
+	<div class="aura"></div>
+
+	<main class="container parallax">
+
+		<div class="parallax__container">
+			<div class="parallax__image"></div>
+		</div>
+
+		<header class="header">
+			<button class="header__button menu-icon active-button" aria-label="Menu-icon">
+				<span class="menu-icon__line menu-icon__line_left"></span>
+				<span class="menu-icon__line"></span>
+				<span class="menu-icon__line menu-icon__line_right"></span>
+			</button>
+
+			<nav class="header__navigation">
+				<ul class="header__list">
+					<li class="header__list-item">
+						<a href="index.html" class="header__link active-button">Home</a>
+					</li>
+					<li class="header__list-item active-link">
+						<a href="about.html" class="header__link active-button">About</a>
+					</li>
+					<li class="header__list-item">
+						<a href="work.html" class="header__link active-button">Work</a>
+					</li>
+					<li class="header__list-item">
+						<a href="contact.html" class="header__link active-button">Contact</a>
+					</li>
+				</ul>
+			</nav>
+			<button class="theme-switch active-button"></button>
+		</header>
+
+		<article class="page__content about-page__content content">
+			<h1 class="about-page__title">About me</h1>
+			<div class="about-page__wrapper">
+				<p>Hey, my name is Denys Ustymenko, I&#39;m a front-end web developer from Ukraine. I&#39;m always curious to
+					learn more when it comes to new technologies and creative coding. Always ready to respond to you!</p>
+			</div>
+
+			<a href="contact.html" class="rotate-link active-button">
+				<svg viewBox='0 0 200 200' width='200' height='200' xmlns='http://www.w3.org/2000/svg' class="rotate-link__svg"
+					aria-labelledby="rotate-link1-title rotate-link1-desc">
+					<title id="rotate-link1-title">Come quick and contact me</title>
+					<desc id="rotate-link1-desc">A rotating link with text placed around a circle with an arrow inside</desc>
+
+					<path id="rotate-link-circle" class="rotate-link__path" d="M 20, 100 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0"
+						stroke="none" fill="none" />
+
+					<path class="rotate-link__arrow" d="M 75 100 L 125 100 L 110 85 M 125 100 L 110 115" fill="none" />
+
+					<text class="rotate-link__text">
+						<textPath href="#rotate-link-circle" stroke="none">
+							Come quick and contact me
+						</textPath>
+					</text>
+				</svg>
+			</a>
+
+		</article>
+
+	</main>
+
+</body>
+
+</html>
