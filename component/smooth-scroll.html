@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smooth scroll</title>
-    <style>
-        .block {
-            min-height: 3000px;
-            background-color: tomato;
-        }
-    </style>
-</head>
-<body>
-    <a id="first" href="#second">First link</a>
-    <div class="block"></div>
-    <a id="second" href="#first">Second link</a>
-    <script>
-        const anchors = document.querySelectorAll('a[href*="#"]');
 
-        for (let anchor of anchors) {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const blockID = anchor.getAttribute('href')
-                document.querySelector('' + blockID).scrollIntoView({
-                    behavior: "smooth",
-                    block: "start"
-                })
-            })
-        }
-    </script>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Smooth scroll</title>
+	<style>
+		.block {
+			min-height: 3000px;
+			background-color: tomato;
+		}
+	</style>
+</head>
+
+<body>
+	<a id="first" href="#second">First link</a>
+	<div class="block"></div>
+	<a id="second" href="#first">Second link</a>
+	<script>
+		const anchors = document.querySelectorAll('a[href*="#"]');
+
+		for (let anchor of anchors) {
+			anchor.addEventListener('click', function (e) {
+				e.preventDefault();
+				const blockID = anchor.getAttribute('href')
+				document.querySelector('' + blockID).scrollIntoView({
+					behavior: "smooth",
+					block: "start"
+				})
+			})
+		}
+	</script>
 </body>
+
 </html>
