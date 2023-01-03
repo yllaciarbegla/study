@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	let page = document.querySelector('.coming-soon');
 
 	if (page) {
-		const someEvent = new Date('Jan 1 2023 00:00:00');
+		const someEvent = new Date('Jan 1 2024 00:00:00');
 
 		const daysVal = document.querySelector('.timer__days .timer__value');
 		const hoursVal = document.querySelector('.timer__hours .timer__value');
